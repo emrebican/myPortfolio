@@ -1,0 +1,22 @@
+.container {
+  @apply fixed w-full h-20 shadow-lg z-[100];
+}
+
+.content {
+  @apply flex justify-between items-center 
+  w-full h-full px-8 2xl:px-16 transition-all;
+}
+
+.list {
+  @apply hidden md:flex gap-4;
+}
+
+.link {
+  @apply text-sm text-gray-600 uppercase 
+  transition-all duration-100 
+  hover:font-bold hover:text-[#212121];
+}
+
+.menuIcon {
+  @apply md:hidden;
+}
