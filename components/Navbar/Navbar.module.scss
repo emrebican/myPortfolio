@@ -18,5 +18,6 @@
 }
 
 .menuIcon {
-  @apply md:hidden;
+  @apply md:hidden text-2xl cursor-pointer text-gray-600 
+  hover:text-[#212121] transition-all duration-200 hover:text-3xl;
 }

@@ -1,16 +1,12 @@
 import styles from './Navbar.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
+import { TItem } from '../../constants/types-interfaces'
 import { RxHamburgerMenu } from 'react-icons/rx'
 
 import Menu from '../Menu/Menu'
-
-type TItem = {
-  url: string
-  title: string
-  id: number
-}
 
 const listItems = [
   { url: '/', title: 'home', id: 1 },
@@ -21,6 +17,13 @@ const listItems = [
 ]
 
 const Navbar = () => {
+  const [viewMenu, setViewMenu] = useState<boolean>(false)
+  console.log(viewMenu)
+
+  const handleViewMenu = () => {
+    setViewMenu(!viewMenu)
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -30,6 +33,11 @@ const Navbar = () => {
           width={70}
           height={70}
         />
+        <Menu
+          listItems={listItems}
+          viewMenu={viewMenu}
+          handleViewMenu={handleViewMenu}
+        />
         <ul className={styles.list}>
           {listItems.map((item: TItem) => (
             <li key={item.id} className={styles.link}>
@@ -37,10 +45,9 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className={styles.menuIcon}>
-          <RxHamburgerMenu size={25} />
+        <div onClick={handleViewMenu} className={styles.menuIcon}>
+          <RxHamburgerMenu />
         </div>
-        <Menu />
       </div>
     </div>
   )
