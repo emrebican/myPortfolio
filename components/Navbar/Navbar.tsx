@@ -32,9 +32,9 @@ const Navbar = ({ viewMenu, handleViewMenu, shadow }: any) => {
         />
         <ul className={styles.list}>
           {listItems.map((item: TItem) => (
-            <li key={item.id} className={styles.link}>
-              <Link href={item.url}>{item.title}</Link>
-            </li>
+            <Link key={item.id} className={styles.link} href={item.url}>
+              {item.title}
+            </Link>
           ))}
         </ul>
         <div onClick={handleViewMenu} className={styles.menuIcon}>

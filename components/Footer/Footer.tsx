@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <footer className="mb-6 mt-10">
+    <footer className="mb-6 mt-12 lg:mt-32">
       <Link
         href="https://github.com/emrebican"
         target="_blank"

@@ -20,16 +20,16 @@ const Menu = ({ listItems, viewMenu, handleViewMenu }: any) => {
               width={50}
               height={50}
             />
-            <div className={styles.backIcon}>
-              <MdArrowBackIos onClick={handleViewMenu} />
+            <div className={styles.backIcon} onClick={handleViewMenu}>
+              <MdArrowBackIos />
             </div>
           </div>
           <hr className="bg-gray-300 h-0.5 mt-6 mb-10" />
           <ul className="flex flex-col gap-2">
             {listItems.map((item: TItem) => (
-              <li key={item.id} className={styles.menuLink}>
-                <Link href={item.url}>{item.title}</Link>
-              </li>
+              <Link href={item.url} key={item.id} className={styles.menuLink}>
+                {item.title}
+              </Link>
             ))}
           </ul>
         </div>

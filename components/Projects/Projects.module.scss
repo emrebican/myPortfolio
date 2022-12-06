@@ -1,6 +1,22 @@
 .container {
   @apply w-full lg:h-screen px-2 pt-32;
 
+  .upArrow {
+    @apply flex justify-center items-center pt-20 lg:pt-10;
+
+    a {
+      @apply p-3 lg:p-4 rounded-full
+      transition-all duration-200 ease-in-out
+      shadow-lg shadow-gray-500 bg-blue-500
+      hover:bg-[#212121] hover:text-white hover:animate-pulse;
+
+      svg {
+        @apply text-2xl
+        transition-all duration-200 ease-in;
+      }
+    }
+  }
+
   .content {
     @apply xl:w-[70%] md:w-[90%] mx-auto h-full transition-all duration-200 ease-in;
 
