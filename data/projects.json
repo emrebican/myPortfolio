@@ -4,20 +4,31 @@
     "name": "Book Shelf",
     "made": "reactJS",
     "image": "/assets/projects/pro-1.jpg",
-    "technologies": ["js", "css", "html"]
+    "technologies": ["js", "css", "html"],
+    "url": "/"
   },
   {
     "id": 2,
     "name": "Movies",
     "made": "reactJS",
     "image": "/assets/projects/pro-2.jpg",
-    "technologies": ["js", "css", "html"]
+    "technologies": ["js", "css", "html"],
+    "url": "/"
   },
   {
     "id": 3,
-    "name": "Movies",
+    "name": "Weather App",
     "made": "reactJS",
-    "image": "/assets/projects/pro-1.jpg",
-    "technologies": ["js", "css", "html"]
+    "image": "/assets/projects/pro-3.png",
+    "technologies": ["js", "css", "html"],
+    "url": "/"
+  },
+  {
+    "id": 4,
+    "name": "Tenzies Game",
+    "made": "javascript",
+    "image": "/assets/projects/pro-4.png",
+    "technologies": ["js", "css", "html"],
+    "url": "/"
   }
 ]

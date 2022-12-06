@@ -9,3 +9,12 @@ export type TSkill = {
   image: string
   id: number
 }
+
+export type TProject = {
+  name: string
+  made: string
+  image: string
+  technologies?: string[]
+  url: string
+  id: number
+}
