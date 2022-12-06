@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Book Shelf",
+    "made": "reactJS",
+    "image": "/assets/projects/pro-1.jpg",
+    "technologies": ["js", "css", "html"]
+  },
+  {
+    "id": 2,
+    "name": "Movies",
+    "made": "reactJS",
+    "image": "/assets/projects/pro-2.jpg",
+    "technologies": ["js", "css", "html"]
+  },
+  {
+    "id": 3,
+    "name": "Movies",
+    "made": "reactJS",
+    "image": "/assets/projects/pro-1.jpg",
+    "technologies": ["js", "css", "html"]
+  }
+]

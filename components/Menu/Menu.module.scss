@@ -6,7 +6,7 @@
   @apply fixed left-0 top-0 p-10 
       flex flex-col justify-between 
       w-[75%] sm:w-[65%] md:w-[45%] h-screen 
-      bg-[#ecf0f3] ease-in duration-500;
+      bg-[#ecf0f3] ease-in duration-500 overflow-hidden;
 }
 
 .menuDeactive {
@@ -16,8 +16,25 @@
 .backIcon {
   @apply cursor-pointer text-xl text-gray-600 w-8 h-8
       flex justify-center items-center
-      transition-all duration-100 
-      hover:text-[#212121] hover:text-3xl;
+      transition-all duration-100 relative
+      hover:text-[#ecf0f3] hover:text-3xl delay-200;
+}
+
+.backIcon:after {
+  @apply absolute bg-[#212121] transition-all ease-in duration-300 
+  rounded-tl-full rounded-bl-full;
+  content: '';
+  width: 270%;
+  height: 140%;
+  top: -25%;
+  right: -400%;
+  background: #212121;
+  box-shadow: 4px 4px 4px #212121;
+}
+
+.backIcon:hover:after {
+  transform: translateX(-100%);
+  z-index: -1;
 }
 
 .menuLink {

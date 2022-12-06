@@ -2,7 +2,7 @@
   @apply w-full lg:h-screen px-2;
 
   .content {
-    @apply xl:w-[70%] md:w-[90%] mx-auto;
+    @apply xl:w-[70%] md:w-[90%] mx-auto transition-all duration-200 ease-in;
 
     h1,
     h3 {

@@ -1,9 +1,16 @@
+import { useState } from 'react'
 import Navbar from './Navbar/Navbar'
 
 const Layout = ({ children }: any) => {
+  const [viewMenu, setViewMenu] = useState<boolean>(false)
+
+  const handleViewMenu = () => {
+    setViewMenu(!viewMenu)
+  }
+
   return (
     <>
-      <Navbar />
+      <Navbar viewMenu={viewMenu} handleViewMenu={handleViewMenu} />
       <div className="px-12">{children}</div>
 
       {/* <footer>

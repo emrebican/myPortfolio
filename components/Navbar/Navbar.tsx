@@ -9,14 +9,7 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 
 import Menu from '../Menu/Menu'
 
-const Navbar = () => {
-  const [viewMenu, setViewMenu] = useState<boolean>(false)
-  console.log(viewMenu)
-
-  const handleViewMenu = () => {
-    setViewMenu(!viewMenu)
-  }
-
+const Navbar = ({ viewMenu, handleViewMenu }: any) => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
