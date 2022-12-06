@@ -1,0 +1,36 @@
+.container {
+  @apply w-full lg:h-screen px-2;
+
+  .content {
+    @apply xl:w-[70%] md:w-[90%] mx-auto;
+
+    h1,
+    h3 {
+      @apply capitalize mb-2;
+    }
+    h3 {
+      @apply text-2xl text-blue-700;
+    }
+
+    .items {
+      @apply grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
+      gap-8 my-10;
+
+      .item {
+        @apply p-4 bg-[#ecf0f3] rounded cursor-pointer
+        shadow-lg shadow-gray-600
+        flex justify-around items-center
+        hover:scale-105 transition-all ease-in duration-200
+        hover:bg-[#212121];
+
+        p {
+          @apply text-xl text-gray-500 font-semibold capitalize
+          transition-all ease-in duration-200;
+        }
+        &:hover p {
+          @apply text-[#ecf0f3];
+        }
+      }
+    }
+  }
+}

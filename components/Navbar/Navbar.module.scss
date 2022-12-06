@@ -1,5 +1,5 @@
 .container {
-  @apply fixed w-full h-20 shadow-lg z-[100];
+  @apply fixed w-full h-20 shadow-lg z-[100] bg-gray-50/90;
 }
 
 .content {
@@ -8,16 +8,47 @@
 }
 
 .list {
-  @apply hidden md:flex gap-4;
+  @apply hidden md:flex md:gap-6 xl:gap-8 transition-all ease-in duration-200;
 }
 
 .link {
   @apply text-sm text-gray-600 uppercase 
   transition-all duration-100 
-  hover:font-bold hover:text-[#212121];
+  relative overflow-hidden p-1 rounded-sm
+  hover:font-bold hover:text-[#ecf0f3];
+}
+
+.link:after {
+  @apply absolute w-full h-2 bg-[#212121] transition-all ease-in duration-300;
+  content: '';
+  bottom: -2px;
+  left: -100%;
+  z-index: -1;
+}
+
+.link:hover:after {
+  @apply translate-x-full;
+  box-shadow: 0 0 0 40px #265bec;
+  background: #265bec;
 }
 
 .menuIcon {
-  @apply md:hidden text-2xl cursor-pointer text-gray-600 
-  hover:text-[#212121] transition-all duration-200 hover:text-3xl;
+  @apply md:hidden p-2 text-2xl cursor-pointer text-[#212121] rounded-full relative
+  transition-all duration-200 ease-in overflow-hidden
+  hover:text-[1.6rem] hover:text-[#ecf0f3];
+}
+
+.menuIcon:after {
+  @apply w-full h-full absolute rounded-full 
+  transition-all ease-in duration-300 bg-blue-600
+  opacity-0;
+  content: '';
+  bottom: -50%;
+  right: -100%;
+  z-index: -1;
+}
+
+.menuIcon:hover:after {
+  transform: translate(-100%, -50%);
+  opacity: 1;
 }

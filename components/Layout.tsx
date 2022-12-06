@@ -4,7 +4,7 @@ const Layout = ({ children }: any) => {
   return (
     <>
       <Navbar />
-      <div className="py-32 px-12">{children}</div>
+      <div className="px-12">{children}</div>
 
       {/* <footer>
         <a

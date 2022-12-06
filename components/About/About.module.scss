@@ -1,0 +1,32 @@
+.container {
+  @apply w-full md:h-screen p-2 py-16;
+
+  .content {
+    @apply xl:w-[70%] lg:w-[90%] mx-auto 
+    flex flex-col md:flex-row justify-center items-center gap-8
+    transition-all duration-200 ease-in;
+
+    .text {
+      h1,
+      h3 {
+        @apply capitalize mb-2;
+      }
+      h3 {
+        @apply text-2xl text-blue-700;
+      }
+      p {
+        @apply text-lg text-gray-800 tracking-wide;
+      }
+      span {
+        @apply text-sm text-gray-500;
+      }
+    }
+
+    img {
+      @apply w-full h-[400px] md:w-[400px] md:h-[620px] 
+      object-cover shadow-xl shadow-gray-400 rounded-md
+      md:rounded-b-[50%] md:rounded-br-[40%] md:rounded-bl-[45%] 
+      md:rounded-tl-[60%] md:rounded-tr-[15%] md:rounded-l-[40%];
+    }
+  }
+}

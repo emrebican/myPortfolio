@@ -3,18 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
+import listItems from '../../data/list.json'
 import { TItem } from '../../constants/types-interfaces'
 import { RxHamburgerMenu } from 'react-icons/rx'
 
 import Menu from '../Menu/Menu'
-
-const listItems = [
-  { url: '/', title: 'home', id: 1 },
-  { url: '/', title: 'about', id: 2 },
-  { url: '/', title: 'skills', id: 3 },
-  { url: '/', title: 'projects', id: 4 },
-  { url: '/', title: 'contact', id: 5 }
-]
 
 const Navbar = () => {
   const [viewMenu, setViewMenu] = useState<boolean>(false)

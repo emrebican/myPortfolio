@@ -1,0 +1,16 @@
+[
+  { "id": 1, "title": "html", "image": "/assets/skills/html.png" },
+  { "id": 2, "title": "css", "image": "/assets/skills/css.png" },
+  { "id": 3, "title": "sass", "image": "/assets/skills/sass.png" },
+  { "id": 4, "title": "javaScript", "image": "/assets/skills/javascript.png" },
+  { "id": 5, "title": "typeScript", "image": "/assets/skills/typescript.svg" },
+  { "id": 6, "title": "react", "image": "/assets/skills/react.png" },
+  { "id": 7, "title": "redux", "image": "/assets/skills/redux.svg" },
+  { "id": 8, "title": "nextJS", "image": "/assets/skills/nextjs.png" },
+  { "id": 9, "title": "firebase", "image": "/assets/skills/firebase.png" },
+  { "id": 10, "title": "github", "image": "/assets/skills/github.png" },
+  { "id": 11, "title": "tailwind", "image": "/assets/skills/tailwind.png" },
+  { "id": 12, "title": "material UI", "image": "/assets/skills/material.png" },
+  { "id": 13, "title": "figma", "image": "/assets/skills/figma.svg" },
+  { "id": 14, "title": "react test library", "image": "/assets/skills/rtl.png" }
+]

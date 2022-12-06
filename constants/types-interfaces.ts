@@ -3,3 +3,9 @@ export type TItem = {
   title: string
   id: number
 }
+
+export type TSkill = {
+  title: string
+  image: string
+  id: number
+}
