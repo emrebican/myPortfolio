@@ -21,14 +21,13 @@
 }
 
 .backIcon:after {
-  @apply absolute bg-[#212121] transition-all ease-in duration-300 
+  @apply absolute bg-[#212121] transition-all ease-in duration-150 
   rounded-tl-full rounded-bl-full;
   content: '';
   width: 270%;
   height: 140%;
   top: -25%;
   right: -400%;
-  background: #212121;
   box-shadow: 4px 4px 4px #212121;
 }
 

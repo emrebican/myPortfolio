@@ -1,0 +1,74 @@
+.container {
+  @apply w-full lg:h-screen py-24 mb-0 lg:mb-80;
+
+  .content {
+    @apply max-w-[1240px] m-auto px-2 py-16 w-full;
+
+    h1,
+    h3 {
+      @apply capitalize mb-2;
+    }
+    h3 {
+      @apply text-2xl text-blue-700;
+    }
+
+    /* WRAPPER */
+    .wrapper {
+      @apply flex flex-col gap-[4rem] relative;
+
+      /* LEFT */
+      .leftWrapper {
+        @apply block lg:absolute
+        left-0 lg:w-[50%] lg:h-[800px]
+        w-full h-[320px] shadow shadow-gray-400 rounded-xl;
+        top: 50%;
+        transform: translateY(8%);
+
+        img {
+          @apply w-full h-full 
+          lg:h-full lg:w-full object-cover rounded-xl;
+          object-position: center 20%;
+        }
+      }
+
+      /* RIGHT */
+      .rightWrapper {
+        @apply w-full h-full block lg:absolute
+        top-0 right-0 lg:w-[58%] lg:h-[800px]
+        rounded-lg p-4 bg-gray-200;
+
+        box-shadow: -10px 10px 15px #9ca3af;
+
+        .title {
+          @apply text-4xl text-center font-light py-4;
+        }
+
+        form {
+          @apply p-1 sm:p-4 lg:p-6 lg:py-12;
+
+          main {
+            @apply grid md:grid-cols-2 gap-4 w-full;
+          }
+
+          label {
+            @apply text-sm py-2 uppercase font-semibold;
+          }
+          input,
+          textarea {
+            @apply w-full h-1/2 border-2 border-gray-300
+            transition-all duration-200 ease-in
+            text-base font-normal tracking-wider
+            rounded-md p-3 outline-none focus:border-[#212121];
+          }
+          button {
+            @apply rounded w-full bg-[#212121] h-[50px] mt-4
+            transition-all duration-300 ease-in hover:font-bold
+            shadow-md shadow-gray-400 border-2 border-[#212121]
+            hover:shadow-lg hover:bg-[#ecf0f3] hover:text-[#212121]
+            text-[#ecf0f3] font-semibold tracking-widest uppercase;
+          }
+        }
+      }
+    }
+  }
+}

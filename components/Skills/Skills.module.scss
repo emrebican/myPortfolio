@@ -1,5 +1,5 @@
 .container {
-  @apply w-full lg:h-screen px-2;
+  @apply w-full lg:h-screen px-2 pt-32;
 
   .content {
     @apply xl:w-[70%] md:w-[90%] mx-auto transition-all duration-200 ease-in;
@@ -17,9 +17,9 @@
       gap-8 my-10;
 
       .item {
-        @apply p-4 bg-[#ecf0f3] rounded cursor-pointer
+        @apply p-4 md:px-4 bg-[#ecf0f3] rounded cursor-pointer
         shadow-lg shadow-gray-600
-        flex justify-around items-center
+        flex justify-around md:justify-between items-center
         hover:scale-105 transition-all ease-in duration-200
         hover:bg-[#212121];
 

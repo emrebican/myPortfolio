@@ -1,7 +1,3 @@
-.container {
-  @apply fixed w-full h-20 shadow-lg z-[100] bg-gray-50/90;
-}
-
 .content {
   @apply flex justify-between items-center 
   w-full h-full px-8 2xl:px-16 transition-all;

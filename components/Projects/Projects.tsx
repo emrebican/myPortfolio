@@ -9,7 +9,7 @@ const Projects = () => {
   ))
 
   return (
-    <div className={styles.container}>
+    <div id="projects" className={styles.container}>
       <div className={styles.content}>
         <h3>Projects</h3>
         <h1>No time to stop</h1>

@@ -1,7 +1,7 @@
 [
-  { "url": "/", "title": "home", "id": 1 },
-  { "url": "/", "title": "about", "id": 2 },
-  { "url": "/", "title": "skills", "id": 3 },
-  { "url": "/", "title": "projects", "id": 4 },
-  { "url": "/", "title": "contact", "id": 5 }
+  { "url": "/#", "title": "home", "id": 1 },
+  { "url": "/#about", "title": "about", "id": 2 },
+  { "url": "/#skills", "title": "skills", "id": 3 },
+  { "url": "/#projects", "title": "projects", "id": 4 },
+  { "url": "/contact", "title": "contact", "id": 5 }
 ]

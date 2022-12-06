@@ -5,7 +5,7 @@ import { TSkill } from '../../constants/types-interfaces'
 
 const Skills = () => {
   return (
-    <div className={styles.container}>
+    <div id="skills" className={styles.container}>
       <div className={styles.content}>
         <h3>Skills</h3>
         <h1>They are beautiful</h1>

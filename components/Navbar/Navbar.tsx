@@ -1,7 +1,7 @@
 import styles from './Navbar.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import listItems from '../../data/list.json'
 import { TItem } from '../../constants/types-interfaces'
@@ -9,9 +9,15 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 
 import Menu from '../Menu/Menu'
 
-const Navbar = ({ viewMenu, handleViewMenu }: any) => {
+const Navbar = ({ viewMenu, handleViewMenu, shadow }: any) => {
   return (
-    <div className={styles.container}>
+    <div
+      className={
+        shadow
+          ? 'fixed w-full h-20 shadow-xl z-[100] bg-gray-50/90 transition-all duration-300 ease-in-out'
+          : 'fixed w-full h-20 z-[100] bg-transparent transition-all duration-300 ease-in-out'
+      }
+    >
       <div className={styles.content}>
         <Image
           src="/assets/portfolio-image.png"
