@@ -6,9 +6,10 @@ import { TItem } from '../../constants/types-interfaces'
 import { MdArrowBackIos } from 'react-icons/md'
 import { VscGithub } from 'react-icons/vsc'
 import { HiMail } from 'react-icons/hi'
-import { RiFacebookFill, RiLinkedinFill } from 'react-icons/ri'
+import { RiLinkedinFill } from 'react-icons/ri'
+import { SiVercel } from 'react-icons/si'
 
-const Menu = ({ listItems, viewMenu, handleViewMenu }: any) => {
+const Menu = ({ listItems, viewMenu, handleViewMenu, setViewMenu }: any) => {
   return (
     <div className={viewMenu ? styles.menuWrapper : ''}>
       <div className={viewMenu ? styles.menuActive : styles.menuDeactive}>
@@ -27,7 +28,12 @@ const Menu = ({ listItems, viewMenu, handleViewMenu }: any) => {
           <hr className="bg-gray-300 h-0.5 mt-6 mb-10" />
           <ul className="flex flex-col gap-2">
             {listItems.map((item: TItem) => (
-              <Link href={item.url} key={item.id} className={styles.menuLink}>
+              <Link
+                onClick={() => setViewMenu(false)}
+                href={item.url}
+                key={item.id}
+                className={styles.menuLink}
+              >
                 {item.title}
               </Link>
             ))}
@@ -48,11 +54,8 @@ const Menu = ({ listItems, viewMenu, handleViewMenu }: any) => {
             <Link href="mailto:emrebican11@hotmail.com">
               <HiMail />
             </Link>
-            <Link
-              href="https://www.facebook.com/yunusemre.bican/"
-              target="_blank"
-            >
-              <RiFacebookFill />
+            <Link href="https://vercel.com/emrebican" target="_blank">
+              <SiVercel />
             </Link>
           </div>
         </div>

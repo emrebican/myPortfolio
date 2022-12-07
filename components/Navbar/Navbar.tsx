@@ -8,9 +8,17 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 
 import Menu from '../Menu/Menu'
 
-const Navbar = ({ viewMenu, handleViewMenu, shadow }: any) => {
+const Navbar = ({
+  viewMenu,
+  handleViewMenu,
+  shadow,
+  setViewMenu,
+  navBG,
+  linkColor
+}: any) => {
   return (
     <div
+      style={{ background: navBG }}
       className={
         shadow
           ? 'fixed w-full h-20 shadow-xl z-[100] bg-gray-50/90 transition-all duration-300 ease-in-out'
@@ -31,15 +39,23 @@ const Navbar = ({ viewMenu, handleViewMenu, shadow }: any) => {
           listItems={listItems}
           viewMenu={viewMenu}
           handleViewMenu={handleViewMenu}
+          setViewMenu={setViewMenu}
         />
         <ul className={styles.list}>
           {listItems.map((item: TItem) => (
-            <Link key={item.id} className={styles.link} href={item.url}>
+            <Link
+              key={item.id}
+              href={item.url}
+              className={linkColor ? styles.link : styles.linkOff}
+            >
               {item.title}
             </Link>
           ))}
         </ul>
-        <div onClick={handleViewMenu} className={styles.menuIcon}>
+        <div
+          onClick={handleViewMenu}
+          className={linkColor ? styles.menuIcon : styles.menuIconOff}
+        >
           <RxHamburgerMenu />
         </div>
       </div>

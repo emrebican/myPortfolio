@@ -7,6 +7,7 @@
   @apply hidden md:flex md:gap-6 xl:gap-8 transition-all ease-in duration-200;
 }
 
+/* MenuIcon ON */
 .link {
   @apply text-sm xl:text-base text-gray-600 uppercase 
   transition-all duration-100 
@@ -28,8 +29,31 @@
   background: #265bec;
 }
 
+/* MenuIcon OFF */
+.linkOff {
+  @apply text-sm xl:text-base text-[#ecf0f3] uppercase 
+  transition-all duration-100 
+  relative overflow-hidden p-1 rounded-sm
+  hover:font-bold hover:text-[#ecf0f3];
+}
+
+.linkOff:after {
+  @apply absolute w-full h-2 bg-[#212121] transition-all ease-in duration-300;
+  content: '';
+  bottom: -2px;
+  left: -100%;
+  z-index: -1;
+}
+
+.linkOff:hover:after {
+  @apply translate-x-full;
+  box-shadow: 0 0 0 40px #265bec;
+  background: #265bec;
+}
+
+/* MenuIcon ON */
 .menuIcon {
-  @apply md:hidden p-2 text-2xl cursor-pointer text-[#212121] rounded-full relative
+  @apply md:hidden p-2 text-2xl cursor-pointer text-[#212121] rounded-full relative 
   transition-all duration-200 ease-in 
   hover:text-[1.6rem] hover:text-[#ecf0f3];
 }
@@ -45,5 +69,26 @@
 }
 
 .menuIcon:hover:after {
+  @apply w-full h-full opacity-100;
+}
+
+/* MenuIcon OFF */
+.menuIconOff {
+  @apply md:hidden p-2 text-2xl cursor-pointer text-[#ecf0f3] rounded-full relative 
+  transition-all duration-200 ease-in 
+  hover:text-[1.6rem] hover:text-[#ecf0f3];
+}
+
+.menuIconOff:after {
+  @apply w-0 h-0 absolute rounded-full 
+  transition-all ease-in duration-300 bg-blue-600
+  opacity-0;
+  content: '';
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.menuIconOff:hover:after {
   @apply w-full h-full opacity-100;
 }

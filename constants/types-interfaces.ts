@@ -14,7 +14,16 @@ export type TProject = {
   name: string
   made: string
   image: string
-  technologies?: string[]
   url: string
   id: number
+}
+
+export interface IProduct {
+  title: string
+  overview: string
+  demo: string
+  code: string
+  image: string
+  made: string[]
+  tech: string[]
 }

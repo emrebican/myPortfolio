@@ -5,30 +5,27 @@
     "made": "reactJS",
     "image": "/assets/projects/pro-1.jpg",
     "technologies": ["js", "css", "html"],
-    "url": "/"
+    "url": "/bookShelf"
   },
   {
     "id": 2,
     "name": "Movies",
     "made": "reactJS",
-    "image": "/assets/projects/pro-2.jpg",
-    "technologies": ["js", "css", "html"],
-    "url": "/"
+    "image": "/assets/projects/pro-2.png",
+    "url": "/movieApp"
   },
   {
     "id": 3,
     "name": "Weather App",
     "made": "reactJS",
     "image": "/assets/projects/pro-3.png",
-    "technologies": ["js", "css", "html"],
-    "url": "/"
+    "url": "/weatherApp"
   },
   {
     "id": 4,
     "name": "Tenzies Game",
     "made": "javascript",
     "image": "/assets/projects/pro-4.png",
-    "technologies": ["js", "css", "html"],
-    "url": "/"
+    "url": "/tenziesGame"
   }
 ]
