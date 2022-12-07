@@ -1,5 +1,5 @@
 [
-  { "url": "/#", "title": "home", "id": 1 },
+  { "url": "/", "title": "home", "id": 1 },
   { "url": "/#about", "title": "about", "id": 2 },
   { "url": "/#skills", "title": "skills", "id": 3 },
   { "url": "/#projects", "title": "projects", "id": 4 },

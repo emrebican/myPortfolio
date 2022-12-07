@@ -1,7 +1,6 @@
 import styles from './Navbar.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
 
 import listItems from '../../data/list.json'
 import { TItem } from '../../constants/types-interfaces'
@@ -19,12 +18,15 @@ const Navbar = ({ viewMenu, handleViewMenu, shadow }: any) => {
       }
     >
       <div className={styles.content}>
-        <Image
-          src="/assets/portfolio-image.png"
-          alt="portfolio-image"
-          width={70}
-          height={70}
-        />
+        <Link href="/">
+          <Image
+            src="/assets/portfolio-image.png"
+            alt="portfolio-image"
+            width={70}
+            height={70}
+            className="hover:scale-105 transition-all duration-200 ease-in"
+          />
+        </Link>
         <Menu
           listItems={listItems}
           viewMenu={viewMenu}

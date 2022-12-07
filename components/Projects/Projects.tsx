@@ -14,7 +14,12 @@ const Projects = () => {
     <div id="projects" className={styles.container}>
       <div className={styles.content}>
         <h3>Projects</h3>
-        <h1>No time to stop</h1>
+        <div className={styles.group}>
+          <h1>NaN stop</h1>
+          <Link href="https://github.com/emrebican" target="_blank">
+            see more
+          </Link>
+        </div>
         <div className={styles.projectsContainer}>{displayProjects}</div>
       </div>
       <div className={styles.upArrow}>

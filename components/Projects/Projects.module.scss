@@ -28,6 +28,17 @@
       @apply text-2xl text-blue-700;
     }
 
+    .group {
+      @apply flex justify-between items-center;
+
+      a {
+        @apply text-white bg-[#212121] py-2 px-4 rounded
+        shadow-md shadow-gray-400 border-2 border-[#212121]
+        hover:bg-transparent hover:text-[#212121] hover:font-semibold
+        transition-all duration-200 ease-in-out;
+      }
+    }
+
     .projectsContainer {
       @apply grid lg:grid-cols-2 2xl:grid-cols-3 gap-8 mt-10;
     }

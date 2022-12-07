@@ -53,7 +53,7 @@
     @apply mt-6 flex justify-center items-center gap-4 
       sm:gap-8 transition-all duration-200;
 
-    span {
+    a {
       @apply p-2 text-xl
         bg-[#ecf0f3] cursor-pointer
         rounded-full shadow-md shadow-gray-400

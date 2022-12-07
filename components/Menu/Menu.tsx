@@ -36,18 +36,24 @@ const Menu = ({ listItems, viewMenu, handleViewMenu }: any) => {
         <div className={styles.connectWrapper}>
           <p>Connections</p>
           <div className={styles.connect}>
-            <span>
+            <Link href="https://github.com/emrebican" target="_blank">
               <VscGithub />
-            </span>
-            <span>
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/yunus-emre-37179320a/"
+              target="_blank"
+            >
               <RiLinkedinFill />
-            </span>
-            <span>
+            </Link>
+            <Link href="mailto:emrebican11@hotmail.com">
               <HiMail />
-            </span>
-            <span>
+            </Link>
+            <Link
+              href="https://www.facebook.com/yunusemre.bican/"
+              target="_blank"
+            >
               <RiFacebookFill />
-            </span>
+            </Link>
           </div>
         </div>
       </div>

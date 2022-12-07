@@ -30,21 +30,20 @@
 
 .menuIcon {
   @apply md:hidden p-2 text-2xl cursor-pointer text-[#212121] rounded-full relative
-  transition-all duration-200 ease-in overflow-hidden
+  transition-all duration-200 ease-in 
   hover:text-[1.6rem] hover:text-[#ecf0f3];
 }
 
 .menuIcon:after {
-  @apply w-full h-full absolute rounded-full 
+  @apply w-0 h-0 absolute rounded-full 
   transition-all ease-in duration-300 bg-blue-600
   opacity-0;
   content: '';
-  bottom: -50%;
-  right: -100%;
+  top: 0;
+  right: 0;
   z-index: -1;
 }
 
 .menuIcon:hover:after {
-  transform: translate(-100%, -50%);
-  opacity: 1;
+  @apply w-full h-full opacity-100;
 }

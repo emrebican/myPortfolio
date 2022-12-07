@@ -1,0 +1,29 @@
+.connect {
+  @apply fixed top-[50%] right-[-3.2rem] xl:right-[-2rem] rotate-90
+    flex gap-6 z-[100];
+
+  li a {
+    @apply flex flex-col justify-center items-center;
+
+    span {
+      @apply text-2xl rotate-[270deg];
+    }
+    p {
+      transform: scaleX(0);
+      width: 0;
+      margin-left: -20px;
+      transition: all ease 0.4s;
+    }
+  }
+
+  li a:hover p {
+    transform: scaleX(1);
+  }
+  li a:hover span {
+    @apply text-blue-600 transition-all duration-200;
+  }
+
+  hr {
+    @apply bg-gray-400 h-6 w-[2px];
+  }
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Navbar from './Navbar/Navbar'
 import Footer from './Footer/Footer'
+import SideLinks from './SideLinks/SideLinks'
 
 const Layout = ({ children }: any) => {
   const [viewMenu, setViewMenu] = useState<boolean>(false)
@@ -29,6 +30,7 @@ const Layout = ({ children }: any) => {
         shadow={shadow}
       />
       <div className="px-12">{children}</div>
+      <SideLinks />
       <Footer />
     </>
   )
