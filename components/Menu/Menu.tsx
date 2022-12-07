@@ -21,7 +21,11 @@ const Menu = ({ listItems, viewMenu, handleViewMenu, setViewMenu }: any) => {
               width={50}
               height={50}
             />
-            <div className={styles.backIcon} onClick={handleViewMenu}>
+            <div
+              style={{ display: viewMenu ? 'block' : 'none' }}
+              className={styles.backIcon}
+              onClick={handleViewMenu}
+            >
               <MdArrowBackIos />
             </div>
           </div>
