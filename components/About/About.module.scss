@@ -22,11 +22,17 @@
       }
     }
 
-    img {
+    /* img {
       @apply w-full h-[400px] md:w-[400px] md:h-[620px] 
       object-cover shadow-xl shadow-gray-400 rounded-md
       md:rounded-b-[50%] md:rounded-br-[40%] md:rounded-bl-[45%] 
       md:rounded-tl-[60%] md:rounded-tr-[15%] md:rounded-l-[40%];
+    } */
+
+    img {
+      @apply w-full h-[400px] md:w-[400px] md:h-[620px] 
+      object-cover object-left shadow-xl shadow-gray-400 rounded-md 
+      md:rounded-t-full md:rounded-bl-[40%];
     }
   }
 }

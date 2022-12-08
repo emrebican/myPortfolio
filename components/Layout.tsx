@@ -8,11 +8,9 @@ const Layout = ({ children }: any) => {
   const [viewMenu, setViewMenu] = useState<boolean>(false)
   const [shadow, setShadow] = useState<boolean>(false)
   const [navBG, setNavBG] = useState<string>('#ecf0f3')
-  // const [linkColor, setLinkColor] = useState<string>('#4B5563')
   const [linkColor, setLinkColor] = useState<boolean>(true)
 
   const router = useRouter()
-  console.log(router)
 
   const handleViewMenu = () => {
     setViewMenu(!viewMenu)
@@ -31,12 +29,12 @@ const Layout = ({ children }: any) => {
 
   useEffect(() => {
     if (
-      router.asPath === '/' ||
-      router.asPath === '/#about' ||
-      router.asPath === '/#skills' ||
-      router.asPath === '/#projects' ||
-      router.asPath === '/contact' ||
-      router.route === '/404'
+      router?.asPath === '/' ||
+      router?.asPath === '/#about' ||
+      router?.asPath === '/#skills' ||
+      router?.asPath === '/#projects' ||
+      router?.asPath === '/contact' ||
+      router?.route === '/404'
     ) {
       setNavBG('#ecf0f3')
       setLinkColor(true)

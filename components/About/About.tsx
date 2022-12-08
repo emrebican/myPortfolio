@@ -1,6 +1,10 @@
 import styles from './About.module.scss'
+import Image from 'next/image'
+import { useState } from 'react'
 
 const About = () => {
+  const [loading, setLoading] = useState(true)
+
   return (
     <div id="about" className={styles.container}>
       <div className={styles.content}>
@@ -23,7 +27,18 @@ const About = () => {
           {/* eslint-disable react/jsx-no-comment-textnodes */}
           <span>// Still learning...</span>
         </div>
-        <img src="/assets/wallpaper.jpg" alt="wallpaper" />
+        <Image
+          src="/assets/wallpaper.jpg"
+          alt="wallpaper"
+          width={1000}
+          height={1000}
+          className={
+            loading
+              ? 'duration-700 ease-in-out grayscale blur-xl'
+              : 'duration-700 ease-in-out grayscale-0 blur-0'
+          }
+          onLoadingComplete={() => setLoading(false)}
+        />
       </div>
     </div>
   )

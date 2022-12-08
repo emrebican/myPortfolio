@@ -1,8 +1,11 @@
 import styles from './Contact.module.scss'
 import Head from 'next/head'
-import { useEffect } from 'react'
+import Image from 'next/image'
+import { useState, useEffect } from 'react'
 
 const Contact = () => {
+  const [loading, setLoading] = useState(true)
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }, [])
@@ -19,7 +22,18 @@ const Contact = () => {
         <h1>Get in touch</h1>
         <div className={styles.wrapper}>
           <div className={styles.leftWrapper}>
-            <img src="/assets/contact2.jpg" alt="" />
+            {/* <img src="/assets/contact2.jpg" alt="" /> */}
+            <Image
+              src="/assets/contact2.jpg"
+              alt="image"
+              layout="fill"
+              className={
+                loading
+                  ? 'duration-700 ease-in-out grayscale blur-xl'
+                  : 'duration-700 ease-in-out grayscale-0 blur-0'
+              }
+              onLoadingComplete={() => setLoading(false)}
+            />
           </div>
           <div className={styles.rightWrapper}>
             <h2 className={styles.title}>Let&apos;s Talk</h2>
