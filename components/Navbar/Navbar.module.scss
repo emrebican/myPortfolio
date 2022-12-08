@@ -7,12 +7,12 @@
   @apply hidden md:flex md:gap-6 xl:gap-8 transition-all ease-in duration-200;
 }
 
-/* MenuIcon ON */
+/* Navbar ON */
 .link {
   @apply text-sm xl:text-base text-gray-600 uppercase 
-  transition-all duration-100 
-  relative overflow-hidden p-1 rounded-sm
-  hover:font-bold hover:text-[#ecf0f3];
+  transition-all duration-100 font-normal
+  relative overflow-hidden p-1.5 rounded-sm
+  hover:text-[#ecf0f3];
 }
 
 .link:after {
@@ -29,12 +29,12 @@
   background: #265bec;
 }
 
-/* MenuIcon OFF */
+/* Navbar OFF */
 .linkOff {
   @apply text-sm xl:text-base text-[#ecf0f3] uppercase 
-  transition-all duration-100 
-  relative overflow-hidden p-1 rounded-sm
-  hover:font-bold hover:text-[#ecf0f3];
+  transition-all duration-100 font-normal
+  relative overflow-hidden p-1.5 rounded-sm
+  hover:text-[#ecf0f3];
 }
 
 .linkOff:after {

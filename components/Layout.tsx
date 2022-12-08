@@ -35,7 +35,8 @@ const Layout = ({ children }: any) => {
       router.asPath === '/#about' ||
       router.asPath === '/#skills' ||
       router.asPath === '/#projects' ||
-      router.asPath === '/contact'
+      router.asPath === '/contact' ||
+      router.route === '/404'
     ) {
       setNavBG('#ecf0f3')
       setLinkColor(true)

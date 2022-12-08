@@ -10,9 +10,9 @@ const Footer = () => {
         rel="noopener noreferrer"
       >
         <div className="flex justify-center items-center gap-4">
-          <p className="text-sm text-gray-600">made by</p>
+          <p className="text-sm text-gray-600">powered by</p>
           <Image
-            src="/assets/skills/github.png"
+            src="/assets/skills/nextjs.png"
             alt="logo"
             width={24}
             height={24}

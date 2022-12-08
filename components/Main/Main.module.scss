@@ -5,10 +5,10 @@
 .content {
   @apply max-w-[1240px] w-full h-full mx-auto p-2
     flex flex-col justify-center items-center text-center
-    text-[#212121];
+    text-gray-800/90;
 
   h1 {
-    @apply mb-6;
+    @apply mb-6 text-5xl;
 
     span {
       @apply text-blue-600;
@@ -16,7 +16,7 @@
   }
 
   p {
-    @apply text-xl text-[#212121] max-w-[75%] mx-auto tracking-wide leading-normal;
+    @apply text-xl text-gray-600 max-w-[75%] mx-auto tracking-wide leading-normal;
   }
 }
 
