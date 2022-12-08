@@ -16,8 +16,8 @@ const Welcome = () => {
     <div
       className={
         view
-          ? 'bg-blue-600 w-full h-screen flex flex-col justify-center items-center gap-6 transition-all duration-500 ease-in-out'
-          : 'bg-blue-600 flex flex-col justify-center items-center gap-6 w-full h-screen transition-all duration-500 ease-in-out opacity-0'
+          ? 'w-full h-screen flex flex-col justify-center items-center gap-6 transition-all duration-500 ease-in-out bg-gradient-to-br from-cyan-600 to-blue-600'
+          : 'flex flex-col justify-center items-center gap-6 w-full h-screen transition-all duration-500 ease-in-out opacity-0 bg-gradient-to-br from-cyan-600 to-blue-600'
       }
     >
       <Head>
