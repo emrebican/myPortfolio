@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import Navbar from './Navbar/Navbar'
 import Footer from './Footer/Footer'
 import SideLinks from './SideLinks/SideLinks'
-import { useRouter } from 'next/router'
+import Welcome from './Welcome/Welcome'
 
 const Layout = ({ children }: any) => {
   const [viewMenu, setViewMenu] = useState<boolean>(false)
   const [shadow, setShadow] = useState<boolean>(false)
   const [navBG, setNavBG] = useState<string>('#ecf0f3')
   const [linkColor, setLinkColor] = useState<boolean>(true)
+  const [displayWelcome, setDisplayWelcome] = useState<boolean>(true)
 
   const router = useRouter()
 
@@ -43,6 +45,16 @@ const Layout = ({ children }: any) => {
       setLinkColor(false)
     }
   }, [router])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDisplayWelcome(false)
+    }, 2000)
+  }, [])
+
+  if (displayWelcome) {
+    return <Welcome />
+  }
 
   return (
     <>

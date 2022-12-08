@@ -22,7 +22,6 @@ const Contact = () => {
         <h1>Get in touch</h1>
         <div className={styles.wrapper}>
           <div className={styles.leftWrapper}>
-            {/* <img src="/assets/contact2.jpg" alt="" /> */}
             <Image
               src="/assets/contact2.jpg"
               alt="image"

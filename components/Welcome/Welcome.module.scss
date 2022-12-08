@@ -1,0 +1,12 @@
+.wrapper {
+  @apply absolute top-[50%] left-[50%] w-[300px] h-[300px] bg-transparent;
+  transform: translate(-50%, -60%);
+}
+
+.spinner {
+  @apply bg-transparent rounded-full border-4 border-transparent border-b-4 border-b-gray-200  absolute w-[300px] h-[300px] top-0 left-0 animate-spin;
+}
+
+.text {
+  @apply text-4xl text-gray-50 tracking-widest uppercase font-light animate-pulse;
+}
