@@ -36,26 +36,31 @@ const Contact = () => {
           </div>
           <div className={styles.rightWrapper}>
             <h2 className={styles.title}>Let&apos;s Talk</h2>
-            <form>
+            <form
+              lang="en"
+              action="https://getform.io/f/57933c42-58ce-46e3-906c-d1fef1047c60"
+              method="POST"
+              encType="multipart/form-data"
+            >
               <main>
                 <div className="flex flex-col">
                   <label>Name</label>
-                  <input type="text" />
+                  <input type="text" name="name" required />
                 </div>
                 <div className="flex flex-col">
                   <label>Phone Number</label>
-                  <input type="text" />
+                  <input type="text" name="phone" required />
                 </div>
               </main>
               <div className="flex flex-col py-2">
                 <label>Email</label>
-                <input type="text" />
+                <input type="email" name="email" required />
               </div>
               <div className="flex flex-col py-2">
                 <label>Comments</label>
-                <textarea rows={10}></textarea>
+                <textarea rows={10} name="comments" required></textarea>
               </div>
-              <button>Send</button>
+              <button type="submit">Send</button>
             </form>
           </div>
         </div>
