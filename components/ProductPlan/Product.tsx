@@ -17,6 +17,7 @@ const Product = ({
 }: IProduct) => {
   const [loading, setLoading] = useState(true)
 
+  /* Display Made & Techs */
   const displayMade = made.map((m: string, i: number) => (
     <span key={i}>{i == made.length - 1 ? `${m}` : `${m} / `}</span>
   ))

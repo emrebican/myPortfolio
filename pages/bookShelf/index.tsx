@@ -9,11 +9,11 @@ const bookShelf = () => {
         demo="https://react-mui-bookshelf.netlify.app/"
         code="https://github.com/emrebican/BookShelf"
         image="/assets/projects/pro-1.jpg"
-        made={['React JS', 'Reducer', 'Material UI']}
+        made={['React JS', 'Context API', 'Material UI']}
         tech={[
           'React',
           'Javascript',
-          'Reducer',
+          'React Context API',
           'chartJS-2',
           'SCSS',
           'LocalStorage'

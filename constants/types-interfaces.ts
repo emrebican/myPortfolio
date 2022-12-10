@@ -18,6 +18,13 @@ export type TProject = {
   id: number
 }
 
+export type TForm = {
+  name: string
+  phone: string
+  email: string
+  comments: string
+}
+
 export interface IProduct {
   title: string
   overview: string

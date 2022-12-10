@@ -1,20 +1,21 @@
 import styles from './Main.module.scss'
 import { useState, useEffect } from 'react'
+import { cycle } from '../../constants/cycle'
 
 const Main = () => {
   const [text, setText] = useState<string>('eating')
 
   function textLoading() {
     setTimeout(() => {
-      setText('eating')
+      setText(cycle[0])
     }, 0)
 
     setTimeout(() => {
-      setText('walking')
+      setText(cycle[1])
     }, 4000)
 
     setTimeout(() => {
-      setText('coding')
+      setText(cycle[2])
     }, 8000)
   }
 
@@ -39,7 +40,7 @@ const Main = () => {
         </div>
         <div className={styles.text}>
           <p>Everyday, I&apos;m</p>
-          <span>{text}</span>
+          <span className="capitalize">{text}</span>
         </div>
       </div>
     </div>
