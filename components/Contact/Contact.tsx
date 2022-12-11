@@ -1,7 +1,6 @@
 import styles from './Contact.module.scss'
 import Head from 'next/head'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { TForm } from '../../constants/types-interfaces'
 
@@ -13,17 +12,20 @@ const Contact = () => {
     email: '',
     comments: ''
   })
-  const router = useRouter()
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-  }, [])
+  const handleForm = (e: any) => {
+    const { name, value } = e.target
+    setFormValue({ ...formValue, [name]: value })
+  }
 
-  useEffect(() => {}, [])
-
-  const handleForm = () => {
+  const resetForm = () => {
     setFormValue({ name: '', phone: '', email: '', comments: '' })
   }
+
+  useEffect(() => {
+    resetForm()
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }, [])
 
   return (
     <div className={styles.container}>
@@ -60,24 +62,46 @@ const Contact = () => {
               <main>
                 <div className="flex flex-col">
                   <label>Name</label>
-                  <input type="text" name="name" required />
+                  <input
+                    type="text"
+                    name="name"
+                    value={formValue.name}
+                    onChange={handleForm}
+                    required
+                  />
                 </div>
                 <div className="flex flex-col">
                   <label>Phone Number</label>
-                  <input type="text" name="phone" required />
+                  <input
+                    type="text"
+                    name="phone"
+                    value={formValue.phone}
+                    onChange={handleForm}
+                    required
+                  />
                 </div>
               </main>
               <div className="flex flex-col py-2">
                 <label>Email</label>
-                <input type="email" name="email" required />
+                <input
+                  type="email"
+                  name="email"
+                  value={formValue.email}
+                  onChange={handleForm}
+                  required
+                />
               </div>
               <div className="flex flex-col py-2">
                 <label>Comments</label>
-                <textarea rows={10} name="comments" required></textarea>
+                <textarea
+                  rows={10}
+                  name="comments"
+                  value={formValue.comments}
+                  onChange={handleForm}
+                  required
+                ></textarea>
               </div>
-              <button type="submit" onClick={handleForm}>
-                Send
-              </button>
+              <button type="submit">Send</button>
             </form>
           </div>
         </div>
