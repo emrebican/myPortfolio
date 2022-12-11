@@ -19,11 +19,13 @@ const Contact = () => {
   }
 
   const resetForm = () => {
-    setFormValue({ name: '', phone: '', email: '', comments: '' })
+    setTimeout(() => {
+      setFormValue({ name: '', phone: '', email: '', comments: '' })
+    }, 500)
   }
 
   useEffect(() => {
-    resetForm()
+    // resetForm()
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }, [])
 
@@ -54,6 +56,7 @@ const Contact = () => {
           <div className={styles.rightWrapper}>
             <h2 className={styles.title}>Let&apos;s Talk</h2>
             <form
+              onSubmit={resetForm}
               lang="en"
               action="https://getform.io/f/57933c42-58ce-46e3-906c-d1fef1047c60"
               method="POST"
