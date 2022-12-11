@@ -1,6 +1,7 @@
 import styles from './Contact.module.scss'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { TForm } from '../../constants/types-interfaces'
 
@@ -12,11 +13,15 @@ const Contact = () => {
     email: '',
     comments: ''
   })
+  const router = useRouter()
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-    setFormValue({ name: '', phone: '', email: '', comments: '' })
   }, [])
+
+  useEffect(() => {
+    setFormValue({ name: '', phone: '', email: '', comments: '' })
+  }, [router.route])
 
   const handleForm = (e: any) => {
     const { name, value } = e.target
