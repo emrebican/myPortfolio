@@ -19,13 +19,10 @@ const Contact = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }, [])
 
-  useEffect(() => {
-    setFormValue({ name: '', phone: '', email: '', comments: '' })
-  }, [router.route])
+  useEffect(() => {}, [])
 
-  const handleForm = (e: any) => {
-    const { name, value } = e.target
-    setFormValue({ ...formValue, [name]: value })
+  const handleForm = () => {
+    setFormValue({ name: '', phone: '', email: '', comments: '' })
   }
 
   return (
@@ -63,46 +60,24 @@ const Contact = () => {
               <main>
                 <div className="flex flex-col">
                   <label>Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formValue.name}
-                    onChange={handleForm}
-                    required
-                  />
+                  <input type="text" name="name" required />
                 </div>
                 <div className="flex flex-col">
                   <label>Phone Number</label>
-                  <input
-                    type="text"
-                    name="phone"
-                    value={formValue.phone}
-                    onChange={handleForm}
-                    required
-                  />
+                  <input type="text" name="phone" required />
                 </div>
               </main>
               <div className="flex flex-col py-2">
                 <label>Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formValue.email}
-                  onChange={handleForm}
-                  required
-                />
+                <input type="email" name="email" required />
               </div>
               <div className="flex flex-col py-2">
                 <label>Comments</label>
-                <textarea
-                  rows={10}
-                  name="comments"
-                  value={formValue.comments}
-                  onChange={handleForm}
-                  required
-                ></textarea>
+                <textarea rows={10} name="comments" required></textarea>
               </div>
-              <button type="submit">Send</button>
+              <button type="submit" onClick={handleForm}>
+                Send
+              </button>
             </form>
           </div>
         </div>
