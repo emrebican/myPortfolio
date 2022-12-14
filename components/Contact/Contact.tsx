@@ -1,7 +1,8 @@
 import styles from './Contact.module.scss'
 import Head from 'next/head'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
 import { TForm } from '../../constants/types-interfaces'
 
 const Contact = () => {
@@ -13,21 +14,16 @@ const Contact = () => {
     comments: ''
   })
 
+  const router = useRouter()
+
   const handleForm = (e: any) => {
     const { name, value } = e.target
     setFormValue({ ...formValue, [name]: value })
   }
 
   const resetForm = () => {
-    setTimeout(() => {
-      setFormValue({ name: '', phone: '', email: '', comments: '' })
-    }, 500)
+    router.push('/')
   }
-
-  useEffect(() => {
-    // resetForm()
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-  }, [])
 
   return (
     <div className={styles.container}>

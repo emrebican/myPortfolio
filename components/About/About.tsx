@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 const About = () => {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState<boolean>(true)
 
   return (
     <div id="about" className={styles.container}>
